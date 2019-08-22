@@ -3,8 +3,7 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20').Strategy
 const keys = require('./config/keys.js');
 const app = express(); // generates app
-//688963742743-us6tnguo3j93js9jtmaa3hrdrrj28asc.apps.googleusercontent.com
-//secret aEI9BdYQ-jkyGhpA_WzUGcuH
+
 passport.use(
     new GoogleStrategy({
       clientID: keys.googleClientID,
