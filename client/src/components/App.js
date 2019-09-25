@@ -1,10 +1,19 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
+const Header = () => <h2>Header</h2>
+const Dashboard = () => <h2>Dashboard</h2>
+const Survey = () => <h2>Survey</h2>
+const Landing = () => <h2>Landing</h2>
+
 const App = () => {
     return (
         <div>
-            <p>Today started out cold and now it is warming up. Hopefully tomorrow will be a sunny day.</p>
+            <BrowserRouter>
+              <div>
+                <Route path="/" component={Landing}></Route>
+              </div>
+            </BrowserRouter>
         </div>   
     );
 };
