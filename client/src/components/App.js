@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import Header from './Header';
@@ -6,9 +6,16 @@ const Dashboard = () => <h2>Dashboard</h2>
 const SurveyNew = () => <h2>SurveyNew</h2>
 const Landing = () => <h2>Landing</h2>
 
-const App = () => {
+class App extends Component {
+  //checks if user is loggedin or not
+  //displays content based on user login status
+  componentDidMount() {
+
+  }
+
+  render() { 
     return (
-        <div>
+        <div className="container">
             <BrowserRouter>
               <div>
                 <Header />
@@ -19,6 +26,7 @@ const App = () => {
             </BrowserRouter>
         </div>   
     );
+  }
 };
 
   export default App;
